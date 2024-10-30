@@ -1,7 +1,7 @@
 {
   "name": "hero-page",
   "version": "0.1.0",
-  "HomePage": "https://YarikKedrych.github.io/HeroPage",
+  "homepage": "https://yarikkedrych.github.io/HeroPage",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
