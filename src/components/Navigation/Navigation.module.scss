@@ -1,0 +1,132 @@
+@import '../../styles/generals/index.scss';
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(70px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.information__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $font-Chillax;
+
+  animation: slideIn 2s ease forwards;
+}
+
+.information__background {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primary-white;
+  width: 100%;
+  max-width: 520px;
+  height: 68px;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.information__options {
+  display: flex;
+  flex-direction: row;
+}
+
+.information__icon,
+.information__menu,
+.information__restaurant,
+.information__classes,
+.information__bookFone,
+.information__bookATable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500px;
+  gap: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 60px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 14px;
+
+  &:hover {
+    background-color: $primary-on-focus;
+
+    .information__bookATable {
+      background-color: $black-color;
+    }
+  }
+
+  @include onTabletAndUp {
+    width: 80px;
+    height: 48px;
+    font-size: 14px; 
+    line-height: 16px; 
+  }
+
+  @include onLaptopAndUp {
+    width: 100px;
+    height: 48px;
+    font-size: 16px; 
+    line-height: 18px; 
+  }
+}
+
+.information__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.information__bookFone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: $black-color;
+  width: 120px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 14px;
+
+  @include onTabletAndUp {
+    font-size: 14px; 
+    line-height: 16px; 
+  }
+
+  @include onLaptopAndUp {
+    font-size: 16px; 
+    line-height: 18px; 
+  }
+}
+
+.information__bookATable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  color: $primary-white;
+  background-color: $black-color;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 14px; 
+
+  @include onTabletAndUp {
+    font-size: 14px; 
+    line-height: 16px; 
+  }
+
+  @include onLaptopAndUp {
+    font-size: 16px; 
+    line-height: 18px; 
+  }
+}
